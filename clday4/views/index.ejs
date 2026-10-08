@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-image: url('https://wallpapercave.com/wp/wp9764031.jpg');
+      background-size: cover; 
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed; 
+    }
+    .a{
+      background-color: aliceblue;
+    }
+    h3,form{
+      text-align: center;
+    }
+    .a{
+      margin: auto;
+      height: 400px;
+      width: 30%;
+      margin-top: 100px;
+      border-radius: 10px;
+    }
+    .b{
+      padding-top: 50px;
+    }
+    input{
+      width: 70%;
+      padding: 10px 0px;
+      border:1px solid rgb(158, 152, 140);
+      padding-left: 5px;
+    }
+    button{
+      padding: 7px 40px;
+      border: 1px solid rgb(158, 152, 140);
+      background-color: rgb(9, 140, 255);
+      color: aliceblue;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="a">
+    <div class="b">
+
+   
+    <h3 style="text-decoration: underline;font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">  Movie Club  </h3>
+   
+   
+    <form action='/userinfo' method="post">
+      <input name="email" type="email" placeholder="Enter your Email">
+      <br>
+      <br>
+      <input name="pass" type="password" placeholder="Enter your Password ">
+      <br>
+      <br>
+      <button type="submit">Submit</button>
+        <% if (errors && errors.length >0){ %>
+    <% errors.forEach(function(a){ %>
+      <p style="color: red;"><%= a.msg %></p> <br>
+   <% }) %>
+ <%  }  %>
+    </form>
+  </div>
+   </div>
+
+ 
+</body>
+</html>
