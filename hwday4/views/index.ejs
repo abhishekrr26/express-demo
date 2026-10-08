@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+<style>
+  body{
+    margin: 0;
+  }
+  img{
+    height: 260px;
+    object-fit:cover;
+    object-position: center;
+  }
+  div{
+    text-align: center;
+  }
+  input{
+    padding: 15px 0px;
+    padding-left: 5px;
+    margin-top: 20px;
+    width: 30%;
+  }
+  button{
+    padding: 10px 60px;
+    border-radius: 5px;
+    border: 1px solid  wheat;
+    background-color: rgb(222, 163, 91);
+    color: white;
+  }
+</style>
+</head>
+<body>
+  <img width="100%" src="https://cdn.pixabay.com/photo/2018/07/17/14/43/banner-3544296_1280.jpg">
+    <div>
+        <h1>Book Club Registration Form</h1>
+        
+        <form action="/userdata" method="post">
+            <input placeholder="Enter your name" name="name">
+            <br>
+            <input placeholder="Enter your email" name="email">
+            <br>
+            <input placeholder="Enter your password" name="password">
+            <br>
+            <br>
+            <button type="submit">Submit</button>
+
+              <% if (error && error.length >0){ %>
+    <% error.forEach(function(a){ %>
+      <p style="color: red;"><%= a.msg %></p> <br>
+   <% }) %>
+ <%  }  %>
+
+        </form>
+    </div>
+
+
+
+
+
+</body>
+</html>
