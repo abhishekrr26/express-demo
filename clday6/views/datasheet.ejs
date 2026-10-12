@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th, td {
+  border: 1px solid #333;
+  padding: 8px;           
+  text-align: left;       
+}
+
+th {
+  background-color: #f2f2f2;
+}
+    </style>
+</head>
+<body>
+
+    
+     <table style="width: 50%;
+  border-collapse: collapse; text-align: center;">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Quantity </th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% data.forEach(a => { %>
+          <tr>
+            <td><%= a.name %></td>
+            <td><%= a.quantity %></td>
+            <td><%= a.price %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+
+
+
+
+    <p>Total Products: <%= dataone[0].total %></p>
+
+
+
+
+</body>
+</html>
