@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    input{
+      padding: 10px 20px;
+      margin: 10px ;
+    }
+    button{
+      margin: 10px 5px;
+    }
+  </style>
+</head>
+<body style="background-color: rgb(180, 252, 228);">
+<div style="background-color: white; width: 30%; height: 500px; margin: auto; margin-top: 50px;">
+
+  <form style="text-align: center;" action="/savedatabase" method="post">
+    <h4>Fill the form</h4>
+    <input name="name" placeholder="enter the name" >
+    <br>
+    <input name="description" placeholder="enter the description">
+    <br>
+    <input name="price" placeholder="enter the price">
+    <br>
+    <input type="submit">
+  </form>
+<form action="/readdatabase">
+  <button type="submit">Click to show the database</button>
+</form>
+<% if (error) { %>
+    <div style="color: red;">
+      <p>Error(s):</p>
+      <ul>
+        <% Object.values(error).forEach(err => { %>
+          <li><%= err.message %></li>
+        <% }); %>
+      </ul>
+    </div>
+  <% } %>
+</div>
+  
+
+
+
+
+</body>
+</html>
